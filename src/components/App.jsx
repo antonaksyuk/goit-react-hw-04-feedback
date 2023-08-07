@@ -15,7 +15,8 @@ export function App (){
   const handleButtonClic = (evt) => {
     const { name } = evt.target.dataset;
     if (name) {
-      setState(state => ({ ...state, [name]: +1 }))
+      setState(state => ({ ...state, [name]: state[name] +1 }))
+      console.log(state)
     }
   };
 
